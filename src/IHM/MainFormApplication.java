@@ -8,12 +8,18 @@
  * @author gabriel
  */
 public class MainFormApplication extends javax.swing.JFrame {
-
+         ListeContactsFrame listecontacts = new ListeContactsFrame();
+        CreationContactFrame contactFrame = new CreationContactFrame();
+             
     /**
      * Creates new form MainFormApplication
      */
     public MainFormApplication() {
+        listecontacts.setVisible(false);
+        contactFrame.setVisible(false);
+        
         initComponents();
+      
     }
 
     /**
@@ -29,8 +35,8 @@ public class MainFormApplication extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jToggleButton3 = new javax.swing.JToggleButton();
+        jToggleButtonSeeOrUpdateContacts = new javax.swing.JToggleButton();
+        jToggleButtonCreationContact = new javax.swing.JToggleButton();
         jTextField3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -60,25 +66,25 @@ public class MainFormApplication extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton2.setBackground(new java.awt.Color(102, 102, 255));
-        jToggleButton2.setFont(new java.awt.Font("Liberation Sans", 2, 18)); // NOI18N
-        jToggleButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton2.setText("See or Modify your  Contacts");
-        jToggleButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        jToggleButtonSeeOrUpdateContacts.setBackground(new java.awt.Color(102, 102, 255));
+        jToggleButtonSeeOrUpdateContacts.setFont(new java.awt.Font("Liberation Sans", 2, 18)); // NOI18N
+        jToggleButtonSeeOrUpdateContacts.setForeground(new java.awt.Color(255, 255, 255));
+        jToggleButtonSeeOrUpdateContacts.setText("See or Modify your  Contacts");
+        jToggleButtonSeeOrUpdateContacts.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jToggleButtonSeeOrUpdateContacts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                jToggleButtonSeeOrUpdateContactsActionPerformed(evt);
             }
         });
 
-        jToggleButton3.setBackground(new java.awt.Color(102, 102, 255));
-        jToggleButton3.setFont(new java.awt.Font("Liberation Sans", 2, 18)); // NOI18N
-        jToggleButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton3.setText("Create Contact");
-        jToggleButton3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+        jToggleButtonCreationContact.setBackground(new java.awt.Color(102, 102, 255));
+        jToggleButtonCreationContact.setFont(new java.awt.Font("Liberation Sans", 2, 18)); // NOI18N
+        jToggleButtonCreationContact.setForeground(new java.awt.Color(255, 255, 255));
+        jToggleButtonCreationContact.setText("Create Contact");
+        jToggleButtonCreationContact.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jToggleButtonCreationContact.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
+                jToggleButtonCreationContactActionPerformed(evt);
             }
         });
 
@@ -110,8 +116,8 @@ public class MainFormApplication extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(205, 205, 205)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jToggleButtonCreationContact, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jToggleButtonSeeOrUpdateContacts, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -122,9 +128,9 @@ public class MainFormApplication extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
-                .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jToggleButtonCreationContact, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jToggleButtonSeeOrUpdateContacts, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -154,13 +160,20 @@ public class MainFormApplication extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+    private void jToggleButtonSeeOrUpdateContactsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonSeeOrUpdateContactsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+        this.setVisible(false);                    
+        listecontacts.setVisible(true);
+                            
+    }//GEN-LAST:event_jToggleButtonSeeOrUpdateContactsActionPerformed
 
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton3ActionPerformed
+    private void jToggleButtonCreationContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonCreationContactActionPerformed
+                    // TODO add your handling code here:
+                    this.setVisible(false);
+                    contactFrame.setVisible(true);
+                    
+       
+    }//GEN-LAST:event_jToggleButtonCreationContactActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
@@ -207,7 +220,7 @@ public class MainFormApplication extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JToggleButton jToggleButtonCreationContact;
+    private javax.swing.JToggleButton jToggleButtonSeeOrUpdateContacts;
     // End of variables declaration//GEN-END:variables
 }
