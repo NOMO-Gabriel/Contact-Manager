@@ -92,16 +92,15 @@ public class CreationContactFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Bienvenue ,vous pouvez gerez vos contacts en toute securite", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Liberation Sans", 0, 15), new java.awt.Color(102, 102, 255))); // NOI18N
 
-        jTextArea2.setBackground(new java.awt.Color(204, 255, 255));
         jTextArea2.setColumns(20);
         jTextArea2.setForeground(new java.awt.Color(255, 0, 255));
         jTextArea2.setText("Renseignez les champs pour creer un contact ");
         jScrollPane2.setViewportView(jTextArea2);
 
-        jPanel2.setBackground(new java.awt.Color(153, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
 
         jTextField1.setEditable(false);
         jTextField1.setText("telNumber:");
@@ -192,11 +191,8 @@ public class CreationContactFrame extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(16, 16, 16))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(8, 8, 8)
@@ -238,7 +234,7 @@ public class CreationContactFrame extends javax.swing.JFrame {
                 .addContainerGap(168, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(153, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
         jComboBox1.setBackground(new java.awt.Color(204, 204, 204));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Etudiant", "Enseignant", "Agent" }));
@@ -292,7 +288,7 @@ public class CreationContactFrame extends javax.swing.JFrame {
         });
 
         jTextField19.setEditable(false);
-        jTextField19.setBackground(new java.awt.Color(153, 255, 255));
+        jTextField19.setBackground(new java.awt.Color(255, 255, 255));
         jTextField19.setFont(new java.awt.Font("Liberation Sans", 0, 10)); // NOI18N
         jTextField19.setForeground(new java.awt.Color(255, 51, 153));
         jTextField19.setText("Agents uniquement:");
@@ -311,7 +307,7 @@ public class CreationContactFrame extends javax.swing.JFrame {
         });
 
         jTextField22.setEditable(false);
-        jTextField22.setBackground(new java.awt.Color(153, 255, 255));
+        jTextField22.setBackground(new java.awt.Color(255, 255, 255));
         jTextField22.setFont(new java.awt.Font("Liberation Sans", 0, 10)); // NOI18N
         jTextField22.setForeground(new java.awt.Color(255, 51, 153));
         jTextField22.setText("etudiants uniquement");
@@ -338,7 +334,7 @@ public class CreationContactFrame extends javax.swing.JFrame {
         });
 
         jTextField23.setEditable(false);
-        jTextField23.setBackground(new java.awt.Color(153, 255, 255));
+        jTextField23.setBackground(new java.awt.Color(255, 255, 255));
         jTextField23.setFont(new java.awt.Font("Liberation Sans", 0, 10)); // NOI18N
         jTextField23.setForeground(new java.awt.Color(255, 51, 153));
         jTextField23.setText("enseignants uniquement:");
@@ -372,7 +368,7 @@ public class CreationContactFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(255, 51, 255));
+        jButton1.setBackground(new java.awt.Color(102, 102, 255));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Valider");
 
@@ -425,10 +421,6 @@ public class CreationContactFrame extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(163, 163, 163)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField24)
                     .addComponent(jTextField17))
@@ -472,6 +464,10 @@ public class CreationContactFrame extends javax.swing.JFrame {
                 .addComponent(jTextField25, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
                 .addGap(33, 33, 33)
                 .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(146, 146, 146))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addContainerGap()
@@ -523,9 +519,9 @@ public class CreationContactFrame extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(75, 75, 75)

@@ -42,12 +42,11 @@ public class ListeContactsFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Contact Manager", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Liberation Sans", 3, 18), new java.awt.Color(255, 51, 204))); // NOI18N
         jPanel1.setForeground(new java.awt.Color(0, 0, 255));
 
         jTable1.setAutoCreateRowSorter(true);
-        jTable1.setBackground(new java.awt.Color(204, 255, 204));
         jTable1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Liberation Sans", 0, 18), new java.awt.Color(102, 51, 255))); // NOI18N
         jTable1.setFont(new java.awt.Font("Liberation Sans", 3, 18)); // NOI18N
         jTable1.setForeground(new java.awt.Color(255, 255, 255));
@@ -98,7 +97,6 @@ public class ListeContactsFrame extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jComboBox1.setBackground(new java.awt.Color(153, 255, 255));
         jComboBox1.setFont(new java.awt.Font("Liberation Sans", 3, 18)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(51, 51, 255));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Etudiant", "Enseignant", "Agent" }));
@@ -109,7 +107,7 @@ public class ListeContactsFrame extends javax.swing.JFrame {
         });
 
         jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(153, 255, 255));
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1.setFont(new java.awt.Font("Liberation Sans", 3, 18)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(51, 51, 255));
         jTextField1.setText("Select a contact type:");

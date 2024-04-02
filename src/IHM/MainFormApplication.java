@@ -35,11 +35,11 @@ public class MainFormApplication extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "                     Contact Manager", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Liberation Sans", 1, 36), new java.awt.Color(255, 51, 153))); // NOI18N
 
         jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(153, 255, 255));
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(51, 51, 255));
         jTextField1.setText("Welcome To your App Contact Manageryou can create or Manage your Contacts Here");
@@ -50,7 +50,7 @@ public class MainFormApplication extends javax.swing.JFrame {
         });
 
         jTextField2.setEditable(false);
-        jTextField2.setBackground(new java.awt.Color(153, 255, 255));
+        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
         jTextField2.setFont(new java.awt.Font("Liberation Sans", 3, 18)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(51, 51, 255));
         jTextField2.setText("       Wath do you want to do? select a bottom to do it ");
@@ -83,7 +83,7 @@ public class MainFormApplication extends javax.swing.JFrame {
         });
 
         jTextField3.setEditable(false);
-        jTextField3.setBackground(new java.awt.Color(153, 255, 255));
+        jTextField3.setBackground(new java.awt.Color(255, 255, 255));
         jTextField3.setFont(new java.awt.Font("Liberation Sans", 3, 18)); // NOI18N
         jTextField3.setForeground(new java.awt.Color(255, 51, 204));
         jTextField3.setText("                Contact Manager,the best Application to Manage your contacts");
