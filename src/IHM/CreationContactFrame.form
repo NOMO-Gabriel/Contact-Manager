@@ -107,7 +107,7 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel3" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
@@ -166,41 +166,35 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jTextField5" min="-2" pref="98" max="-2" attributes="0"/>
+                              <Component id="jTextField_title_email" min="-2" pref="98" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jTextField9" max="32767" attributes="0"/>
+                              <Component id="jTextField_email" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jTextField1" max="32767" attributes="0"/>
+                              <Component id="jTextField_title_tel_num" max="32767" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jTextField8" min="-2" pref="267" max="-2" attributes="0"/>
+                              <Component id="jTextField_telNumber" min="-2" pref="267" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jTextField4" min="-2" pref="96" max="-2" attributes="0"/>
+                              <Component id="jTextField_title_nom" min="-2" pref="96" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                              <Component id="jTextField11" max="32767" attributes="0"/>
+                              <Component id="jTextField_nom" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jTextField7" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="jTextField3" min="-2" pref="92" max="-2" attributes="0"/>
-                                  <Component id="jTextField6" alignment="0" min="-2" pref="92" max="-2" attributes="0"/>
+                                  <Component id="jTextField_title_code" min="-2" pref="92" max="-2" attributes="0"/>
+                                  <Component id="jTextField_title_adress" alignment="0" min="-2" pref="92" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="jTextField_code" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                              <Component id="jTextField_title_date_naiss" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextField12" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="jTextField10" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                      <Component id="jTextField2" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="jTextField_dateNaiss" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="jTextField_address" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -210,8 +204,8 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButtonRetour" min="-2" pref="191" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="191" max="-2" attributes="0"/>
-                      <EmptySpace pref="64" max="32767" attributes="0"/>
+                      <Component id="jButton_valider" min="-2" pref="191" max="-2" attributes="0"/>
+                      <EmptySpace pref="121" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -220,38 +214,38 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_title_code" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_code" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField11" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_nom" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_title_nom" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField12" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_dateNaiss" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_title_date_naiss" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_title_adress" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_address" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_title_email" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_email" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_title_tel_num" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_telNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButtonRetour" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jButton1" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                          <Component id="jButton_valider" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -259,80 +253,80 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="jTextField_title_tel_num">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="text" type="java.lang.String" value="telNumber:"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_title_tel_numActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField2">
+            <Component class="javax.swing.JTextField" name="jTextField_code">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_codeActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField3">
+            <Component class="javax.swing.JTextField" name="jTextField_title_code">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="text" type="java.lang.String" value="code :"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_title_codeActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField4">
+            <Component class="javax.swing.JTextField" name="jTextField_title_nom">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="text" type="java.lang.String" value="nom:"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_title_nomActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField5">
+            <Component class="javax.swing.JTextField" name="jTextField_title_email">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="text" type="java.lang.String" value="email:"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField5ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_title_emailActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField6">
+            <Component class="javax.swing.JTextField" name="jTextField_title_adress">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="text" type="java.lang.String" value="adresse:"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField6ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_title_adressActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField7">
+            <Component class="javax.swing.JTextField" name="jTextField_title_date_naiss">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="date_Naiss:"/>
+                <Property name="text" type="java.lang.String" value="date de Naissance:"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField7ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_title_date_naissActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField8">
+            <Component class="javax.swing.JTextField" name="jTextField_telNumber">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField9">
+            <Component class="javax.swing.JTextField" name="jTextField_email">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField9ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_emailActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField10">
+            <Component class="javax.swing.JTextField" name="jTextField_address">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField11">
+            <Component class="javax.swing.JTextField" name="jTextField_nom">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField11ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_nomActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField12">
+            <Component class="javax.swing.JTextField" name="jTextField_dateNaiss">
             </Component>
             <Component class="javax.swing.JButton" name="jButtonRetour">
               <Properties>
@@ -348,7 +342,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRetourActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="jButton_valider">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="66" red="66" type="rgb"/>
@@ -358,6 +352,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Valider"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_validerActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -372,69 +369,69 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jTextField18" max="32767" attributes="0"/>
+                      <Component id="jTextField__title_statut_ens" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="jComboBox6" min="-2" pref="174" max="-2" attributes="0"/>
+                      <Component id="jComboBox_statut_ens" min="-2" pref="174" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextField24" max="32767" attributes="0"/>
-                          <Component id="jTextField17" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextField_title_statut_agent" max="32767" attributes="0"/>
+                          <Component id="jTextField_title_salaire_agent" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jComboBox9" min="-2" pref="168" max="-2" attributes="0"/>
+                              <Component id="jComboBox_statut_agent" min="-2" pref="168" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jTextField28" min="-2" pref="180" max="-2" attributes="0"/>
+                              <Component id="jTextField_salaire_agent" min="-2" pref="180" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="jTextField26" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="jTextField30" min="-2" pref="180" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jTextField15" max="32767" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jTextField29" min="-2" pref="180" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jTextField14" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                              <Component id="jComboBox1" min="-2" pref="168" max="-2" attributes="0"/>
-                          </Group>
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField22" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField23" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField19" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="jTextField_title_categorie_agent" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="jTextField_categorie_agent" min="-2" pref="180" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jTextField_title_occupation_agent" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jTextField_occupation_agent" min="-2" pref="180" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jTextField13" max="32767" attributes="0"/>
-                                  <Component id="jTextField16" max="32767" attributes="0"/>
+                                  <Component id="jTextField_title_cycle_etu" max="32767" attributes="0"/>
+                                  <Component id="jTextField_title_niveau_etu" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jComboBox4" alignment="1" min="-2" pref="168" max="-2" attributes="0"/>
-                                  <Component id="jComboBox3" alignment="1" min="-2" pref="168" max="-2" attributes="0"/>
+                                  <Component id="jComboBox_niveau_etu" alignment="1" min="-2" pref="168" max="-2" attributes="0"/>
+                                  <Component id="jComboBox_cycle_etu" alignment="1" min="-2" pref="168" max="-2" attributes="0"/>
                               </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jTextField_title_indice_agent" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="jTextField_indice_salaire_agent" min="-2" pref="180" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTextField_ind_etu" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_ind_ens" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_ind_agent" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jTextField14" min="-2" pref="388" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jComboBox_poste" pref="360" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="jTextField25" pref="303" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="jTextField27" min="-2" pref="180" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
@@ -451,53 +448,53 @@
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jTextField14" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBox_poste" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField22" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextField_ind_etu" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField13" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_title_cycle_etu" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBox_cycle_etu" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField16" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_title_niveau_etu" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBox_niveau_etu" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jTextField23" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextField_ind_ens" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField18" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField__title_statut_ens" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBox_statut_ens" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jTextField19" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextField_ind_agent" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField17" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField28" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_title_salaire_agent" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_salaire_agent" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField24" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_title_statut_agent" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBox_statut_agent" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField26" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField30" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_title_categorie_agent" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_categorie_agent" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField25" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField27" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_title_indice_agent" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_indice_salaire_agent" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="15" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField15" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField29" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_title_occupation_agent" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField_occupation_agent" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
                   </Group>
@@ -512,36 +509,37 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JComboBox" name="jComboBox1">
+            <Component class="javax.swing.JComboBox" name="jComboBox_poste">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="33" green="33" red="ff" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="Etudiant"/>
-                    <StringItem index="1" value="Enseignant"/>
-                    <StringItem index="2" value="Agent"/>
+                  <StringArray count="4">
+                    <StringItem index="0" value="Selectionner un type de Contact ici"/>
+                    <StringItem index="1" value="Etudiant"/>
+                    <StringItem index="2" value="Enseignant"/>
+                    <StringItem index="3" value="Agent"/>
                   </StringArray>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox_posteActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField13">
+            <Component class="javax.swing.JTextField" name="jTextField_title_cycle_etu">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="cycle:"/>
+                <Property name="text" type="java.lang.String" value="Cycle de l&apos;etudiant:"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField13ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_title_cycle_etuActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox3">
+            <Component class="javax.swing.JComboBox" name="jComboBox_cycle_etu">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -554,31 +552,31 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox_cycle_etuActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField15">
+            <Component class="javax.swing.JTextField" name="jTextField_title_occupation_agent">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="occupation:"/>
+                <Property name="text" type="java.lang.String" value="occupation de l&apos;Agent :"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField15ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_title_occupation_agentActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField16">
+            <Component class="javax.swing.JTextField" name="jTextField_title_niveau_etu">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="niveau:"/>
+                <Property name="text" type="java.lang.String" value="Niveau de l&apos;etudiant:"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField16ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_title_niveau_etuActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox4">
+            <Component class="javax.swing.JComboBox" name="jComboBox_niveau_etu">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -597,16 +595,16 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField17">
+            <Component class="javax.swing.JTextField" name="jTextField_title_salaire_agent">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="Salaire:"/>
+                <Property name="text" type="java.lang.String" value="Salaire de l&apos;Agent :"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField17ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_title_salaire_agentActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField19">
+            <Component class="javax.swing.JTextField" name="jTextField_ind_agent">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -621,7 +619,7 @@
                 <Property name="text" type="java.lang.String" value="Agents uniquement:"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField19ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_ind_agentActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField20">
@@ -633,7 +631,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField20ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField22">
+            <Component class="javax.swing.JTextField" name="jTextField_ind_etu">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -648,19 +646,19 @@
                 <Property name="text" type="java.lang.String" value="etudiants uniquement"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField22ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_ind_etuActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField18">
+            <Component class="javax.swing.JTextField" name="jTextField__title_statut_ens">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="statut:"/>
+                <Property name="text" type="java.lang.String" value="Statut de l&apos;enseignant:"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField18ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField__title_statut_ensActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox6">
+            <Component class="javax.swing.JComboBox" name="jComboBox_statut_ens">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -673,13 +671,13 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox6ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox_statut_ensActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField23">
+            <Component class="javax.swing.JTextField" name="jTextField_ind_ens">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -694,37 +692,37 @@
                 <Property name="text" type="java.lang.String" value="enseignants uniquement:"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField23ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_ind_ensActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField24">
+            <Component class="javax.swing.JTextField" name="jTextField_title_statut_agent">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="Statut:"/>
+                <Property name="text" type="java.lang.String" value="Statut de l&apos;Agent:"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField24ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_title_statut_agentActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField25">
+            <Component class="javax.swing.JTextField" name="jTextField_title_indice_agent">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="indice de salaire:"/>
+                <Property name="text" type="java.lang.String" value="indice de salaire de l&apos;Agent :"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField25ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_title_indice_agentActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField26">
+            <Component class="javax.swing.JTextField" name="jTextField_title_categorie_agent">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="categorie:"/>
+                <Property name="text" type="java.lang.String" value="categorie de l&apos;Agent :"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField26ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_title_categorie_agentActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox9">
+            <Component class="javax.swing.JComboBox" name="jComboBox_statut_agent">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -738,7 +736,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox9ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox_statut_agentActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -747,30 +745,33 @@
             <Component class="javax.swing.JTextField" name="jTextField14">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="poste:"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField14ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField27">
+            <Component class="javax.swing.JTextField" name="jTextField_indice_salaire_agent">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField27ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_indice_salaire_agentActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField28">
+            <Component class="javax.swing.JTextField" name="jTextField_salaire_agent">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField28ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_salaire_agentActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField30">
+            <Component class="javax.swing.JTextField" name="jTextField_categorie_agent">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField30ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_categorie_agentActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField29">
+            <Component class="javax.swing.JTextField" name="jTextField_occupation_agent">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField29ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_occupation_agentActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

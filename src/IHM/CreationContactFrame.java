@@ -2,6 +2,10 @@ package IHM;
 import IHM.MainFormApplication;
 import IHM.CreationContactFrame;
 import IHM.ListeContactsFrame;
+import core.Agent;
+import core.Enseignant;
+import core.Repertoire;
+import core.Etudiant;
 
 
 /*
@@ -14,17 +18,96 @@ import IHM.ListeContactsFrame;
  * @author gabriel
  */
 public class CreationContactFrame extends javax.swing.JFrame {
-        private static MainFormApplication mainFrame; 
+        private static MainFormApplication mainFrame;
+        private Repertoire repertoire1;
+        private Repertoire repertoire2;
+        private Repertoire repertoire3;
     /**
      * Creates new form ContactFrame
      */
     public CreationContactFrame(MainFormApplication mainFrame) {
         initComponents();
             this.mainFrame = mainFrame;
-            this.setVisible(true);
+            this.setVisible(false);
             mainFrame.setVisible(false);
+            repertoire1 = new Repertoire();
+            repertoire2 = new Repertoire();
+            repertoire3 = new Repertoire();
         
     }
+    
+    private void activate(boolean a,boolean b,boolean c){
+         //            activer,desactiver les champs de l'etudiant
+            this.jTextField_title_cycle_etu.setVisible(a);
+            this.jComboBox_cycle_etu.setVisible(a);
+            this.jTextField_title_niveau_etu.setVisible(a);
+            this.jComboBox_niveau_etu.setVisible(a);
+     
+//           activer, desctiver les champs de l'enseignant
+            this.jComboBox_statut_ens.setVisible(b);
+            this.jTextField__title_statut_ens.setVisible(b);
+            
+            
+//            activer,desactiver les champs de l'agent        
+            this.jTextField_title_salaire_agent.setVisible(c);
+            this.jTextField_title_statut_agent.setVisible(c);
+            this.jTextField_title_categorie_agent.setVisible(c);
+            this.jTextField_title_indice_agent.setVisible(c);
+            this.jTextField_title_occupation_agent.setVisible(c);
+            this.jTextField_salaire_agent.setVisible(c);
+            this.jComboBox_statut_agent.setVisible(c);
+            this.jTextField_categorie_agent.setVisible(c);
+            this.jTextField_indice_salaire_agent.setVisible(c);
+            this.jTextField_occupation_agent.setVisible(c);
+            
+            
+ //supprimer les indications
+            this.jTextField_ind_etu.setVisible(false);
+            this.jTextField_ind_ens.setVisible(false);
+            this.jTextField_ind_agent.setVisible(false);
+    }
+    
+  private String niv_etu(String niv_etu){
+          int j = this.jComboBox_niveau_etu.getSelectedIndex();
+               switch (j) {
+                           case 0:
+                                niv_etu="I";
+                                break;
+                            case 1:
+                                niv_etu="II";
+                                break;
+                            case 2:
+                                niv_etu="III";
+                                break;
+                            case 3:
+                                niv_etu="VI";
+                                break;
+                            case 4:
+                                niv_etu="V";
+                                break;
+                            default:
+                                break;
+               }
+               return niv_etu;
+  }
+  
+  private String statut_agent(String statut){
+          int j = this.jComboBox_niveau_etu.getSelectedIndex();
+               switch (j) {
+                           case 0:
+                                statut ="Temporaire";
+                                break;
+                            case 1:
+                                statut ="Stagiaire";
+                                break;
+                            case 2:
+                                statut ="Permanent";
+                                break;
+                            default:
+                                break;
+               }
+               return statut;
+  }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,43 +127,43 @@ public class CreationContactFrame extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
+        jTextField_title_tel_num = new javax.swing.JTextField();
+        jTextField_code = new javax.swing.JTextField();
+        jTextField_title_code = new javax.swing.JTextField();
+        jTextField_title_nom = new javax.swing.JTextField();
+        jTextField_title_email = new javax.swing.JTextField();
+        jTextField_title_adress = new javax.swing.JTextField();
+        jTextField_title_date_naiss = new javax.swing.JTextField();
+        jTextField_telNumber = new javax.swing.JTextField();
+        jTextField_email = new javax.swing.JTextField();
+        jTextField_address = new javax.swing.JTextField();
+        jTextField_nom = new javax.swing.JTextField();
+        jTextField_dateNaiss = new javax.swing.JTextField();
         jButtonRetour = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButton_valider = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField13 = new javax.swing.JTextField();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jTextField17 = new javax.swing.JTextField();
-        jTextField19 = new javax.swing.JTextField();
+        jComboBox_poste = new javax.swing.JComboBox<>();
+        jTextField_title_cycle_etu = new javax.swing.JTextField();
+        jComboBox_cycle_etu = new javax.swing.JComboBox<>();
+        jTextField_title_occupation_agent = new javax.swing.JTextField();
+        jTextField_title_niveau_etu = new javax.swing.JTextField();
+        jComboBox_niveau_etu = new javax.swing.JComboBox<>();
+        jTextField_title_salaire_agent = new javax.swing.JTextField();
+        jTextField_ind_agent = new javax.swing.JTextField();
         jTextField20 = new javax.swing.JTextField();
-        jTextField22 = new javax.swing.JTextField();
-        jTextField18 = new javax.swing.JTextField();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jTextField23 = new javax.swing.JTextField();
-        jTextField24 = new javax.swing.JTextField();
-        jTextField25 = new javax.swing.JTextField();
-        jTextField26 = new javax.swing.JTextField();
-        jComboBox9 = new javax.swing.JComboBox<>();
+        jTextField_ind_etu = new javax.swing.JTextField();
+        jTextField__title_statut_ens = new javax.swing.JTextField();
+        jComboBox_statut_ens = new javax.swing.JComboBox<>();
+        jTextField_ind_ens = new javax.swing.JTextField();
+        jTextField_title_statut_agent = new javax.swing.JTextField();
+        jTextField_title_indice_agent = new javax.swing.JTextField();
+        jTextField_title_categorie_agent = new javax.swing.JTextField();
+        jComboBox_statut_agent = new javax.swing.JComboBox<>();
         jTextField14 = new javax.swing.JTextField();
-        jTextField27 = new javax.swing.JTextField();
-        jTextField28 = new javax.swing.JTextField();
-        jTextField30 = new javax.swing.JTextField();
-        jTextField29 = new javax.swing.JTextField();
+        jTextField_indice_salaire_agent = new javax.swing.JTextField();
+        jTextField_salaire_agent = new javax.swing.JTextField();
+        jTextField_categorie_agent = new javax.swing.JTextField();
+        jTextField_occupation_agent = new javax.swing.JTextField();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -113,69 +196,69 @@ public class CreationContactFrame extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
 
-        jTextField1.setEditable(false);
-        jTextField1.setText("telNumber:");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_title_tel_num.setEditable(false);
+        jTextField_title_tel_num.setText("telNumber:");
+        jTextField_title_tel_num.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextField_title_tel_numActionPerformed(evt);
             }
         });
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_code.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jTextField_codeActionPerformed(evt);
             }
         });
 
-        jTextField3.setEditable(false);
-        jTextField3.setText("code :");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_title_code.setEditable(false);
+        jTextField_title_code.setText("code :");
+        jTextField_title_code.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                jTextField_title_codeActionPerformed(evt);
             }
         });
 
-        jTextField4.setEditable(false);
-        jTextField4.setText("nom:");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_title_nom.setEditable(false);
+        jTextField_title_nom.setText("nom:");
+        jTextField_title_nom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                jTextField_title_nomActionPerformed(evt);
             }
         });
 
-        jTextField5.setEditable(false);
-        jTextField5.setText("email:");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_title_email.setEditable(false);
+        jTextField_title_email.setText("email:");
+        jTextField_title_email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                jTextField_title_emailActionPerformed(evt);
             }
         });
 
-        jTextField6.setEditable(false);
-        jTextField6.setText("adresse:");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_title_adress.setEditable(false);
+        jTextField_title_adress.setText("adresse:");
+        jTextField_title_adress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                jTextField_title_adressActionPerformed(evt);
             }
         });
 
-        jTextField7.setEditable(false);
-        jTextField7.setText("date_Naiss:");
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_title_date_naiss.setEditable(false);
+        jTextField_title_date_naiss.setText("date de Naissance:");
+        jTextField_title_date_naiss.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                jTextField_title_date_naissActionPerformed(evt);
             }
         });
 
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                jTextField_emailActionPerformed(evt);
             }
         });
 
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_nom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                jTextField_nomActionPerformed(evt);
             }
         });
 
@@ -188,9 +271,14 @@ public class CreationContactFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(102, 102, 255));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Valider");
+        jButton_valider.setBackground(new java.awt.Color(102, 102, 255));
+        jButton_valider.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_valider.setText("Valider");
+        jButton_valider.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_validerActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -199,136 +287,133 @@ public class CreationContactFrame extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField_title_email, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField9))
+                        .addComponent(jTextField_email))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jTextField1)
+                        .addComponent(jTextField_title_tel_num)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField_telNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField_title_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(24, 24, 24)
-                        .addComponent(jTextField11))
+                        .addComponent(jTextField_nom))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(16, 16, 16))
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextField_title_code, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField_title_adress, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28)
+                        .addComponent(jTextField_code))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jTextField_title_date_naiss, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField12, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField10)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(jTextField2)))))
+                            .addComponent(jTextField_dateNaiss, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextField_address))))
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButtonRetour, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addComponent(jButton_valider, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(121, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_title_code, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_code, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_title_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_dateNaiss, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_title_date_naiss, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_title_adress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_title_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(64, 64, 64)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_title_tel_num, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_telNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(66, 66, 66)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonRetour, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton_valider, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
-        jComboBox1.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Etudiant", "Enseignant", "Agent" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox_poste.setForeground(new java.awt.Color(255, 51, 51));
+        jComboBox_poste.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selectionner un type de Contact ici", "Etudiant", "Enseignant", "Agent" }));
+        jComboBox_poste.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jComboBox_posteActionPerformed(evt);
             }
         });
 
-        jTextField13.setEditable(false);
-        jTextField13.setText("cycle:");
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_title_cycle_etu.setEditable(false);
+        jTextField_title_cycle_etu.setText("Cycle de l'etudiant:");
+        jTextField_title_cycle_etu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
+                jTextField_title_cycle_etuActionPerformed(evt);
             }
         });
 
-        jComboBox3.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "licence", "ingenieur" }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox_cycle_etu.setBackground(new java.awt.Color(204, 204, 204));
+        jComboBox_cycle_etu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "licence", "ingenieur" }));
+        jComboBox_cycle_etu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+                jComboBox_cycle_etuActionPerformed(evt);
             }
         });
 
-        jTextField15.setEditable(false);
-        jTextField15.setText("occupation:");
-        jTextField15.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_title_occupation_agent.setEditable(false);
+        jTextField_title_occupation_agent.setText("occupation de l'Agent :");
+        jTextField_title_occupation_agent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField15ActionPerformed(evt);
+                jTextField_title_occupation_agentActionPerformed(evt);
             }
         });
 
-        jTextField16.setEditable(false);
-        jTextField16.setText("niveau:");
-        jTextField16.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_title_niveau_etu.setEditable(false);
+        jTextField_title_niveau_etu.setText("Niveau de l'etudiant:");
+        jTextField_title_niveau_etu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField16ActionPerformed(evt);
+                jTextField_title_niveau_etuActionPerformed(evt);
             }
         });
 
-        jComboBox4.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "I", "II", "III", "IV", "V" }));
+        jComboBox_niveau_etu.setBackground(new java.awt.Color(204, 204, 204));
+        jComboBox_niveau_etu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "I", "II", "III", "IV", "V" }));
 
-        jTextField17.setEditable(false);
-        jTextField17.setText("Salaire:");
-        jTextField17.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_title_salaire_agent.setEditable(false);
+        jTextField_title_salaire_agent.setText("Salaire de l'Agent :");
+        jTextField_title_salaire_agent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField17ActionPerformed(evt);
+                jTextField_title_salaire_agentActionPerformed(evt);
             }
         });
 
-        jTextField19.setEditable(false);
-        jTextField19.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField19.setFont(new java.awt.Font("Liberation Sans", 0, 10)); // NOI18N
-        jTextField19.setForeground(new java.awt.Color(255, 51, 153));
-        jTextField19.setText("Agents uniquement:");
-        jTextField19.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_ind_agent.setEditable(false);
+        jTextField_ind_agent.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField_ind_agent.setFont(new java.awt.Font("Liberation Sans", 0, 10)); // NOI18N
+        jTextField_ind_agent.setForeground(new java.awt.Color(255, 51, 153));
+        jTextField_ind_agent.setText("Agents uniquement:");
+        jTextField_ind_agent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField19ActionPerformed(evt);
+                jTextField_ind_agentActionPerformed(evt);
             }
         });
 
@@ -340,77 +425,78 @@ public class CreationContactFrame extends javax.swing.JFrame {
             }
         });
 
-        jTextField22.setEditable(false);
-        jTextField22.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField22.setFont(new java.awt.Font("Liberation Sans", 0, 10)); // NOI18N
-        jTextField22.setForeground(new java.awt.Color(255, 51, 153));
-        jTextField22.setText("etudiants uniquement");
-        jTextField22.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_ind_etu.setEditable(false);
+        jTextField_ind_etu.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField_ind_etu.setFont(new java.awt.Font("Liberation Sans", 0, 10)); // NOI18N
+        jTextField_ind_etu.setForeground(new java.awt.Color(255, 51, 153));
+        jTextField_ind_etu.setText("etudiants uniquement");
+        jTextField_ind_etu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField22ActionPerformed(evt);
+                jTextField_ind_etuActionPerformed(evt);
             }
         });
 
-        jTextField18.setEditable(false);
-        jTextField18.setText("statut:");
-        jTextField18.addActionListener(new java.awt.event.ActionListener() {
+        jTextField__title_statut_ens.setEditable(false);
+        jTextField__title_statut_ens.setText("Statut de l'enseignant:");
+        jTextField__title_statut_ens.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField18ActionPerformed(evt);
+                jTextField__title_statut_ensActionPerformed(evt);
             }
         });
 
-        jComboBox6.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vacataire", "Permanent" }));
-        jComboBox6.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox_statut_ens.setBackground(new java.awt.Color(204, 204, 204));
+        jComboBox_statut_ens.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vacataire", "Permanent" }));
+        jComboBox_statut_ens.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox6ActionPerformed(evt);
+                jComboBox_statut_ensActionPerformed(evt);
             }
         });
 
-        jTextField23.setEditable(false);
-        jTextField23.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField23.setFont(new java.awt.Font("Liberation Sans", 0, 10)); // NOI18N
-        jTextField23.setForeground(new java.awt.Color(255, 51, 153));
-        jTextField23.setText("enseignants uniquement:");
-        jTextField23.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_ind_ens.setEditable(false);
+        jTextField_ind_ens.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField_ind_ens.setFont(new java.awt.Font("Liberation Sans", 0, 10)); // NOI18N
+        jTextField_ind_ens.setForeground(new java.awt.Color(255, 51, 153));
+        jTextField_ind_ens.setText("enseignants uniquement:");
+        jTextField_ind_ens.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField23ActionPerformed(evt);
+                jTextField_ind_ensActionPerformed(evt);
             }
         });
 
-        jTextField24.setEditable(false);
-        jTextField24.setText("Statut:");
-        jTextField24.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_title_statut_agent.setEditable(false);
+        jTextField_title_statut_agent.setText("Statut de l'Agent:");
+        jTextField_title_statut_agent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField24ActionPerformed(evt);
+                jTextField_title_statut_agentActionPerformed(evt);
             }
         });
 
-        jTextField25.setEditable(false);
-        jTextField25.setText("indice de salaire:");
-        jTextField25.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_title_indice_agent.setEditable(false);
+        jTextField_title_indice_agent.setText("indice de salaire de l'Agent :");
+        jTextField_title_indice_agent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField25ActionPerformed(evt);
+                jTextField_title_indice_agentActionPerformed(evt);
             }
         });
 
-        jTextField26.setEditable(false);
-        jTextField26.setText("categorie:");
-        jTextField26.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_title_categorie_agent.setEditable(false);
+        jTextField_title_categorie_agent.setText("categorie de l'Agent :");
+        jTextField_title_categorie_agent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField26ActionPerformed(evt);
+                jTextField_title_categorie_agentActionPerformed(evt);
             }
         });
 
-        jComboBox9.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Temporaire", "Stagiaire", "Permanent" }));
-        jComboBox9.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox_statut_agent.setBackground(new java.awt.Color(204, 204, 204));
+        jComboBox_statut_agent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Temporaire", "Stagiaire", "Permanent" }));
+        jComboBox_statut_agent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox9ActionPerformed(evt);
+                jComboBox_statut_agentActionPerformed(evt);
             }
         });
 
         jTextField14.setEditable(false);
+        jTextField14.setBackground(new java.awt.Color(255, 255, 255));
         jTextField14.setText("poste:");
         jTextField14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -418,27 +504,27 @@ public class CreationContactFrame extends javax.swing.JFrame {
             }
         });
 
-        jTextField27.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_indice_salaire_agent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField27ActionPerformed(evt);
+                jTextField_indice_salaire_agentActionPerformed(evt);
             }
         });
 
-        jTextField28.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_salaire_agent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField28ActionPerformed(evt);
+                jTextField_salaire_agentActionPerformed(evt);
             }
         });
 
-        jTextField30.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_categorie_agent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField30ActionPerformed(evt);
+                jTextField_categorie_agentActionPerformed(evt);
             }
         });
 
-        jTextField29.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_occupation_agent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField29ActionPerformed(evt);
+                jTextField_occupation_agentActionPerformed(evt);
             }
         });
 
@@ -447,53 +533,53 @@ public class CreationContactFrame extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addComponent(jTextField18)
+                .addComponent(jTextField__title_statut_ens)
                 .addGap(24, 24, 24)
-                .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jComboBox_statut_ens, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField24)
-                    .addComponent(jTextField17))
+                    .addComponent(jTextField_title_statut_agent)
+                    .addComponent(jTextField_title_salaire_agent))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jComboBox_statut_agent, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jTextField26)
-                .addGap(24, 24, 24)
-                .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField_salaire_agent, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jTextField15)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jTextField14)
-                        .addGap(24, 24, 24)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(jTextField_title_categorie_agent)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextField_categorie_agent, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jTextField_title_occupation_agent)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextField_occupation_agent, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField13)
-                            .addComponent(jTextField16))
+                            .addComponent(jTextField_title_cycle_etu)
+                            .addComponent(jTextField_title_niveau_etu))
                         .addGap(24, 24, 24)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jComboBox_niveau_etu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox_cycle_etu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jTextField_title_indice_agent)
+                        .addGap(27, 27, 27)
+                        .addComponent(jTextField_indice_salaire_agent, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField_ind_etu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField_ind_ens, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField_ind_agent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jComboBox_poste, 0, 360, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jTextField25, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
-                .addGap(33, 33, 33)
-                .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addContainerGap()
@@ -506,45 +592,45 @@ public class CreationContactFrame extends javax.swing.JFrame {
                 .addGap(11, 11, 11)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox_poste, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextField_ind_etu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_title_cycle_etu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_cycle_etu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_title_niveau_etu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_niveau_etu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextField_ind_ens, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField__title_statut_ens, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_statut_ens, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextField_ind_agent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(7, 7, 7)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_title_salaire_agent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_salaire_agent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_title_statut_agent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_statut_agent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_title_categorie_agent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_categorie_agent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_title_indice_agent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_indice_salaire_agent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_title_occupation_agent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_occupation_agent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(134, 134, 134))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
@@ -560,7 +646,7 @@ public class CreationContactFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(256, 256, 256)
@@ -596,73 +682,93 @@ public class CreationContactFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextField_title_tel_numActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_title_tel_numActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jTextField_title_tel_numActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void jTextField_title_codeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_title_codeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_jTextField_title_codeActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void jTextField_title_nomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_title_nomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_jTextField_title_nomActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void jTextField_title_emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_title_emailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_jTextField_title_emailActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void jTextField_title_adressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_title_adressActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_jTextField_title_adressActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void jTextField_title_date_naissActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_title_date_naissActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_jTextField_title_date_naissActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jTextField_codeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_codeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jTextField_codeActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void jTextField_nomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_nomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_jTextField_nomActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void jTextField_emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_emailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_jTextField_emailActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jComboBox_posteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_posteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+        int index = jComboBox_poste.getSelectedIndex();
+        
+            switch (index) {
+                case 0:
+                    this.jButton_valider.setEnabled(false);
+                    activate(false,false,false);
+                    break;
+                case 1:
+                    activate(true,false,false);
+                    break;
+                case 2:
+                    activate(false,true,false);
+                    break;
+                case 3:
+                    activate(false,false,true);
+                    break;
+                default:
+                    break;
+            }
+        
+    }//GEN-LAST:event_jComboBox_posteActionPerformed
 
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    private void jTextField_title_cycle_etuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_title_cycle_etuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_jTextField_title_cycle_etuActionPerformed
 
     private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField14ActionPerformed
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+    private void jComboBox_cycle_etuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_cycle_etuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    }//GEN-LAST:event_jComboBox_cycle_etuActionPerformed
 
-    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+    private void jTextField_title_occupation_agentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_title_occupation_agentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField15ActionPerformed
+    }//GEN-LAST:event_jTextField_title_occupation_agentActionPerformed
 
-    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
+    private void jTextField_title_niveau_etuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_title_niveau_etuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField16ActionPerformed
+    }//GEN-LAST:event_jTextField_title_niveau_etuActionPerformed
 
-    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+    private void jTextField_title_salaire_agentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_title_salaire_agentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField17ActionPerformed
+    }//GEN-LAST:event_jTextField_title_salaire_agentActionPerformed
 
-    private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField19ActionPerformed
+    private void jTextField_ind_agentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_ind_agentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField19ActionPerformed
+    }//GEN-LAST:event_jTextField_ind_agentActionPerformed
 
     private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
         // TODO add your handling code here:
@@ -672,59 +778,134 @@ public class CreationContactFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField21ActionPerformed
 
-    private void jTextField22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField22ActionPerformed
+    private void jTextField_ind_etuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_ind_etuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField22ActionPerformed
+    }//GEN-LAST:event_jTextField_ind_etuActionPerformed
 
-    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
+    private void jTextField__title_statut_ensActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField__title_statut_ensActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField18ActionPerformed
+    }//GEN-LAST:event_jTextField__title_statut_ensActionPerformed
 
-    private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
+    private void jComboBox_statut_ensActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_statut_ensActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox6ActionPerformed
+    }//GEN-LAST:event_jComboBox_statut_ensActionPerformed
 
-    private void jTextField23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField23ActionPerformed
+    private void jTextField_ind_ensActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_ind_ensActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField23ActionPerformed
+    }//GEN-LAST:event_jTextField_ind_ensActionPerformed
 
-    private void jTextField24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField24ActionPerformed
+    private void jTextField_title_statut_agentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_title_statut_agentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField24ActionPerformed
+    }//GEN-LAST:event_jTextField_title_statut_agentActionPerformed
 
-    private void jTextField25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField25ActionPerformed
+    private void jTextField_title_indice_agentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_title_indice_agentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField25ActionPerformed
+    }//GEN-LAST:event_jTextField_title_indice_agentActionPerformed
 
-    private void jTextField26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField26ActionPerformed
+    private void jTextField_title_categorie_agentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_title_categorie_agentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField26ActionPerformed
+    }//GEN-LAST:event_jTextField_title_categorie_agentActionPerformed
 
-    private void jComboBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox9ActionPerformed
+    private void jComboBox_statut_agentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_statut_agentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox9ActionPerformed
+    }//GEN-LAST:event_jComboBox_statut_agentActionPerformed
 
-    private void jTextField27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField27ActionPerformed
+    private void jTextField_indice_salaire_agentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_indice_salaire_agentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField27ActionPerformed
+    }//GEN-LAST:event_jTextField_indice_salaire_agentActionPerformed
 
-    private void jTextField28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField28ActionPerformed
+    private void jTextField_salaire_agentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_salaire_agentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField28ActionPerformed
+    }//GEN-LAST:event_jTextField_salaire_agentActionPerformed
 
-    private void jTextField29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField29ActionPerformed
+    private void jTextField_occupation_agentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_occupation_agentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField29ActionPerformed
+    }//GEN-LAST:event_jTextField_occupation_agentActionPerformed
 
-    private void jTextField30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField30ActionPerformed
+    private void jTextField_categorie_agentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_categorie_agentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField30ActionPerformed
+    }//GEN-LAST:event_jTextField_categorie_agentActionPerformed
 
     private void jButtonRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRetourActionPerformed
         // TODO add your handling code here:
            this.mainFrame.setVisible(true);
            this.setVisible(false);
     }//GEN-LAST:event_jButtonRetourActionPerformed
+
+    private void jButton_validerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_validerActionPerformed
+            String code = this.jTextField_code.getText();
+            String nom = this.jTextField_nom.getText();
+            String date = this.jTextField_dateNaiss.getText();
+            String address = this.jTextField_address.getText();
+            String email = this.jTextField_email.getText();
+            String telNumber = this.jTextField_telNumber.getText();
+            
+            //etudiant
+            String cycle_etu = "";
+            String niv_etu = "";
+            
+            //enseignant
+            String statut_ens = "";
+            
+            //agent
+            String salaire_agent = "";
+            String statut_agent = "";
+            String categorie_agent = "";
+            String indice_agent = "";
+            String occupation_agent = "";
+            int index = jComboBox_poste.getSelectedIndex();
+            switch (index) {
+                        case 1:{
+                                    //recuperer cycle etudiant
+                                int i = this.jComboBox_cycle_etu.getSelectedIndex();
+                                if(i==0){
+                                    cycle_etu = "licence";
+                                }else if(i == 1){
+                                     cycle_etu = "ingenieur";
+                                }
+                                //recuperer niveau etudiant 
+                                  niv_etu = this.niv_etu(niv_etu);  
+                                }
+                                    //ajout au repertoire
+                                  repertoire1.ajouter(new Etudiant(code,nom,date,address,email,telNumber,cycle_etu,niv_etu));
+                                  
+                            break;
+                        case 2://recuperer le statut de l'enseignant
+                             int i = this.jComboBox_statut_ens.getSelectedIndex();
+                                if(i==0){
+                                    statut_ens = "Vacataire";
+                                }else if(i == 1){
+                                     statut_ens = "Permanent";
+                                }
+                                
+                                    //ajout au repertoire
+                                  repertoire2.ajouter(new Enseignant(code,nom,date,address,email,telNumber,statut_ens));
+                            break;
+                        case 3:{
+                            //salaire,categorie,indice de salaire,occupation de l'agent
+                                salaire_agent= this.jTextField_salaire_agent.getText();
+                                categorie_agent =  this.jTextField_categorie_agent.getText();
+                                indice_agent =  this.jTextField_indice_salaire_agent.getText();
+                                occupation_agent = this.jTextField_occupation_agent.getText();
+                            //statut de l'agent
+                             statut_agent = this.statut_agent(statut_agent);                
+                            }
+                                //ajout au repertoire
+                                  repertoire3.ajouter(new Agent(code,nom,date,address,email,telNumber,salaire_agent,statut_agent,categorie_agent,indice_agent,occupation_agent));
+                             break;
+                default:
+                    break;
+            }
+            
+                    System.out.println("--------------etudiants :------------------- " );
+                                repertoire1.afficher();
+
+                    System.out.println("--------------enseignants :------------------- " );
+                            repertoire2.afficher();
+                    System.out.println("--------------agents :------------------- " );
+                            repertoire3.afficher();
+        
+    }//GEN-LAST:event_jButton_validerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -763,13 +944,13 @@ public class CreationContactFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonRetour;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox9;
+    private javax.swing.JButton jButton_valider;
+    private javax.swing.JComboBox<String> jComboBox_cycle_etu;
+    private javax.swing.JComboBox<String> jComboBox_niveau_etu;
+    private javax.swing.JComboBox<String> jComboBox_poste;
+    private javax.swing.JComboBox<String> jComboBox_statut_agent;
+    private javax.swing.JComboBox<String> jComboBox_statut_ens;
     private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -779,35 +960,35 @@ public class CreationContactFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField jTextField__title_statut_ens;
+    private javax.swing.JTextField jTextField_address;
+    private javax.swing.JTextField jTextField_categorie_agent;
+    private javax.swing.JTextField jTextField_code;
+    private javax.swing.JTextField jTextField_dateNaiss;
+    private javax.swing.JTextField jTextField_email;
+    private javax.swing.JTextField jTextField_ind_agent;
+    private javax.swing.JTextField jTextField_ind_ens;
+    private javax.swing.JTextField jTextField_ind_etu;
+    private javax.swing.JTextField jTextField_indice_salaire_agent;
+    private javax.swing.JTextField jTextField_nom;
+    private javax.swing.JTextField jTextField_occupation_agent;
+    private javax.swing.JTextField jTextField_salaire_agent;
+    private javax.swing.JTextField jTextField_telNumber;
+    private javax.swing.JTextField jTextField_title_adress;
+    private javax.swing.JTextField jTextField_title_categorie_agent;
+    private javax.swing.JTextField jTextField_title_code;
+    private javax.swing.JTextField jTextField_title_cycle_etu;
+    private javax.swing.JTextField jTextField_title_date_naiss;
+    private javax.swing.JTextField jTextField_title_email;
+    private javax.swing.JTextField jTextField_title_indice_agent;
+    private javax.swing.JTextField jTextField_title_niveau_etu;
+    private javax.swing.JTextField jTextField_title_nom;
+    private javax.swing.JTextField jTextField_title_occupation_agent;
+    private javax.swing.JTextField jTextField_title_salaire_agent;
+    private javax.swing.JTextField jTextField_title_statut_agent;
+    private javax.swing.JTextField jTextField_title_tel_num;
     // End of variables declaration//GEN-END:variables
 }

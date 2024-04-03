@@ -19,7 +19,7 @@ public class ListeContactsFrame extends javax.swing.JFrame {
     public ListeContactsFrame(MainFormApplication mainFrame ) {
         initComponents();
         this.mainFrame = mainFrame;
-        this.setVisible(true);
+        this.setVisible(false);
         mainFrame.setVisible(false);
     }
 

@@ -1,4 +1,4 @@
-
+package core;
 import core.Contact;
 import java.util.Date;
 
@@ -14,8 +14,8 @@ import java.util.Date;
 public class Enseignant extends Contact{
     private String Statut;
 
-    public Enseignant(String Statut, String code, String nom, Date dateDeNaissance, String address, String email, String telNumber) {
-        super(code, nom, dateDeNaissance, address, email, telNumber);
+    public Enseignant(String code, String nom, String dateDeNaissance, String addresse, String email, String telNumber, String Statut) {
+        super(code, nom, dateDeNaissance, addresse, email, telNumber);
         this.Statut = Statut;
     }
 

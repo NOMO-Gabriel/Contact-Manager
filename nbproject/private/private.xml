@@ -3,11 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/gabriel/NetBeansProjects/ContactManager/src/IHM/StaticFrames.java</file>
+            <file>file:/home/gabriel/NetBeansProjects/ContactManager/src/main/MainApplication.java</file>
+            <file>file:/home/gabriel/NetBeansProjects/ContactManager/src/database/infosConnection.java</file>
+            <file>file:/home/gabriel/NetBeansProjects/ContactManager/src/core/Agent.java</file>
+            <file>file:/home/gabriel/NetBeansProjects/ContactManager/src/IHM/ListeContactsFrame.java</file>
             <file>file:/home/gabriel/NetBeansProjects/ContactManager/src/IHM/CreationContactFrame.java</file>
             <file>file:/home/gabriel/NetBeansProjects/ContactManager/src/IHM/MainFormApplication.java</file>
-            <file>file:/home/gabriel/NetBeansProjects/ContactManager/src/database/database.sql</file>
-            <file>file:/home/gabriel/NetBeansProjects/ContactManager/src/IHM/ListeContactsFrame.java</file>
+            <file>file:/home/gabriel/NetBeansProjects/ContactManager/src/core/Repertoire.java</file>
         </group>
     </open-files>
 </project-private>

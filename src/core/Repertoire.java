@@ -1,5 +1,6 @@
-
+package core;
 import core.Contact;
+import java.util.LinkedList;
 import java.util.List;
 
 /*
@@ -14,8 +15,8 @@ import java.util.List;
 public class Repertoire {
     private List<Contact> contacts;
 
-    public Repertoire(List<Contact> contacts) {
-        this.contacts = contacts;
+    public Repertoire() {
+        contacts = new LinkedList<Contact>();
     }
 
     public List<Contact> getContacts() {
@@ -42,5 +43,13 @@ public class Repertoire {
     
     public int rechercher(Contact contact){
         return contacts.indexOf(contact);
+    }
+    
+    public void afficher(){
+            System.out.print("[ ");
+            for(Contact c:contacts){
+                c.afficher();
+            }
+            System.out.print(" ] ");
     }
 }

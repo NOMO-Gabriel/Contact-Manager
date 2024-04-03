@@ -13,12 +13,12 @@ import java.util.Date;
 public class Contact {
     private String code;
     private String nom;
-    private Date dateDeNaissance;
+    private String dateDeNaissance;
     private String address;
     private String email;
     private String telNumber;
 
-    public Contact(String code, String nom, Date dateDeNaissance, String address, String email, String telNumber) {
+    public Contact(String code, String nom, String dateDeNaissance, String address, String email, String telNumber) {
         this.code = code;
         this.nom = nom;
         this.dateDeNaissance = dateDeNaissance;
@@ -43,11 +43,11 @@ public class Contact {
         this.nom = nom;
     }
 
-    public Date getDateDeNaissance() {
+    public String getDateDeNaissance() {
         return dateDeNaissance;
     }
 
-    public void setDateDeNaissance(Date dateDeNaissance) {
+    public void setDateDeNaissance(String dateDeNaissance) {
         this.dateDeNaissance = dateDeNaissance;
     }
 
@@ -75,6 +75,10 @@ public class Contact {
         this.telNumber = telNumber;
     }
     
+    public void afficher(){
+    
+            System.out.print(" , " +this.getNom() + "," );
+    }
     
     
     

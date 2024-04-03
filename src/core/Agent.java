@@ -11,14 +11,14 @@ import java.util.Date;
  * @author gabriel
  */
 public class Agent extends Contact{
-      private float salaire;
+    private String salaire;
     private String statut;
     private String categorie;
-    private float indiceDeSalaire;
+    private String indiceDeSalaire;
     private String occupation;
 
-    public Agent(float salaire, String statut, String categorie, float indiceDeSalaire, String occupation, String code, String nom, Date dateDeNaissance, String address, String email, String telNumber) {
-        super(code, nom, dateDeNaissance, address, email, telNumber);
+    public Agent(String code, String nom, String dateDeNaissance, String addresse, String email, String telNumber, String salaire, String statut,String categorie,String indiceDeSalaire,String occupation) {
+        super(code, nom, dateDeNaissance, addresse, email, telNumber);
         this.salaire = salaire;
         this.statut = statut;
         this.categorie = categorie;
@@ -26,11 +26,11 @@ public class Agent extends Contact{
         this.occupation = occupation;
     }
 
-    public float getSalaire() {
+    public String getSalaire() {
         return salaire;
     }
 
-    public void setSalaire(float salaire) {
+    public void setSalaire(String salaire) {
         this.salaire = salaire;
     }
 
@@ -50,11 +50,11 @@ public class Agent extends Contact{
         this.categorie = categorie;
     }
 
-    public float getIndiceDeSalaire() {
+    public String getIndiceDeSalaire() {
         return indiceDeSalaire;
     }
 
-    public void setIndiceDeSalaire(float indiceDeSalaire) {
+    public void setIndiceDeSalaire(String indiceDeSalaire) {
         this.indiceDeSalaire = indiceDeSalaire;
     }
 

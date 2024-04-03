@@ -1,4 +1,4 @@
-
+package core;
 import core.Contact;
 import java.util.Date;
 
@@ -15,8 +15,8 @@ public class Etudiant extends Contact{
     private String cycle;
     private String niveau;
 
-    public Etudiant(String cycle, String niveau, String code, String nom, Date dateDeNaissance, String address, String email, String telNumber) {
-        super(code, nom, dateDeNaissance, address, email, telNumber);
+    public Etudiant(String code, String nom, String dateDeNaissance, String addresse, String email, String telNumber, String cycle, String niveau) {
+        super(code, nom, dateDeNaissance, addresse, email, telNumber);
         this.cycle = cycle;
         this.niveau = niveau;
     }
