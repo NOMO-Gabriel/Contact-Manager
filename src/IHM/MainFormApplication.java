@@ -1,3 +1,14 @@
+package IHM;
+
+import static database.infosConnection.password;
+import static database.infosConnection.url;
+import static database.infosConnection.user;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import IHM.CreationContactFrame;
+import IHM.ListeContactsFrame;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -8,17 +19,33 @@
  * @author gabriel
  */
 public class MainFormApplication extends javax.swing.JFrame {
-         ListeContactsFrame listecontacts = new ListeContactsFrame();
-        CreationContactFrame contactFrame = new CreationContactFrame();
+    
+         private Connection connection ;
+         private  ListeContactsFrame listecontacts = new ListeContactsFrame(this);
+         private  CreationContactFrame contactFrame = new CreationContactFrame(this); 
+              
+         
              
     /**
      * Creates new form MainFormApplication
+     * 
      */
     public MainFormApplication() {
-        listecontacts.setVisible(false);
-        contactFrame.setVisible(false);
-        
-        initComponents();
+              
+            
+            initComponents();
+      
+           try {
+                    connection = DriverManager.getConnection(url, user, password);
+                    if (connection != null){System.out.println("-------Connecté à la base de données MySQL !-----------"); }
+                } catch (SQLException ex) {
+                    System.out.println("----------------------------------------------------------erreur de connection -----------------------------");
+     
+                }  
+           this.setVisible(true);
+           listecontacts.setVisible(false);
+           contactFrame.setVisible(false);
+ 
       
     }
 
@@ -162,15 +189,14 @@ public class MainFormApplication extends javax.swing.JFrame {
 
     private void jToggleButtonSeeOrUpdateContactsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonSeeOrUpdateContactsActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);                    
-        listecontacts.setVisible(true);
-                            
+                   this.setVisible(false);
+                   listecontacts.setVisible(true);
     }//GEN-LAST:event_jToggleButtonSeeOrUpdateContactsActionPerformed
 
     private void jToggleButtonCreationContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonCreationContactActionPerformed
                     // TODO add your handling code here:
-                    this.setVisible(false);
-                    contactFrame.setVisible(true);
+                   this.setVisible(false);
+                   contactFrame.setVisible(true);
                     
        
     }//GEN-LAST:event_jToggleButtonCreationContactActionPerformed
